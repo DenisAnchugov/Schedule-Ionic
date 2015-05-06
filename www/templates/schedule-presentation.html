@@ -1,0 +1,100 @@
+<ion-view view-title="{{weekSchedule.title}}">
+  <ion-nav-bar class="bar-energized">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+  </ion-nav-bar>
+    <ion-tabs class="tabs-positive tabs-top">
+      <ion-tab title="Mon">
+        <ion-view>
+          <ion-content>
+            <div class="card" ng-repeat="subject in weekSchedule.weekdays[0].subjects" type="item-text-wrap" href="#">
+              <ion-item class="item-divider">
+              <div>{{subject.date.start | date: 'HH:mm'}}</div>
+              </ion-item>
+              <ion-item class="item-text-wrap">
+                {{subject.subject.name}}
+              </ion-item>
+              <ion-item class="item-divider">
+                {{subject.date.end | date: 'HH:mm'}}
+              </ion-item>
+            </div>
+          </ion-content>
+        </ion-view>
+      </ion-tab>
+
+      <ion-tab title="Tues">
+        <ion-view>
+          <ion-content>
+            <div class="card" ng-repeat="subject in weekSchedule.weekdays[1].subjects" type="item-text-wrap" href="#">
+              <ion-item class="item-divider">
+                {{subject.date.start | date: 'HH:mm'}}
+              </ion-item>
+              <ion-item class="item-text-wrap">
+                {{subject.subject.name}}
+              </ion-item>
+              <ion-item class="item-divider">
+                {{subject.date.end | date: 'HH:mm'}}
+              </ion-item>
+            </div>
+          </ion-content>
+        </ion-view>
+
+      </ion-tab>
+
+      <ion-tab title="Wed">
+        <ion-view>
+          <ion-content>
+            <div class="card" ng-repeat="subject in weekSchedule.weekdays[2].subjects" type="item-text-wrap" href="#">
+              <ion-item class="item-divider">
+                {{subject.date.start | date: 'HH:mm'}}
+              </ion-item>
+              <ion-item class="item-text-wrap">
+                {{subject.subject.name}}
+              </ion-item>
+              <ion-item class="item-divider">
+                {{subject.date.end | date: 'HH:mm'}}
+              </ion-item>
+            </div>
+          </ion-content>
+        </ion-view>
+
+      </ion-tab>
+
+      <ion-tab title="Thu">
+        <ion-view>
+          <ion-content>
+            <div class="card" ng-repeat="subject in weekSchedule.weekdays[3].subjects" type="item-text-wrap" href="#">
+              <ion-item class="item-divider">
+                {{subject.date.start | date: 'HH:mm'}}
+              </ion-item>
+              <ion-item class="item-text-wrap">
+                {{subject.subject.name}}
+              </ion-item>
+              <ion-item class="item-divider">
+                {{subject.date.end | date: 'HH:mm'}}
+              </ion-item>
+            </div>
+          </ion-content>
+        </ion-view>
+      </ion-tab>
+
+      <ion-tab title="Fri">
+        <ion-view>
+          <ion-content>
+            <div class="card" ng-repeat="subject in weekSchedule.weekdays[4].subjects" type="item-text-wrap" href="#">
+              <ion-item class="item-divider">
+                {{subject.date.start | date: 'HH:mm'}}
+              </ion-item>
+              <ion-item class="item-text-wrap">
+                {{subject.subject.name}}
+              </ion-item>
+              <ion-item class="item-divider">
+                {{subject.date.end | date: 'HH:mm'}}
+              </ion-item>
+            </div>
+          </ion-content>
+        </ion-view>
+      </ion-tab>
+    </ion-tabs>
+  </ion-pane>
+</ion-view>

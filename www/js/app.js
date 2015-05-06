@@ -30,6 +30,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services']).
       url: '/scheduleSelection/:category',
       templateUrl: 'templates/schedule-selection.html',
       controller: 'ScheduleSelection'
+    })
+
+    .state('schedulePresentation', {
+      url: '/schedulePresentation/:requestedSchedule',
+      templateUrl: 'templates/schedule-presentation.html',
+      controller: 'SchedulePresentation'
     });
 
     $urlRouterProvider.otherwise('/main');
