@@ -1,5 +1,7 @@
 'use strict';
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services']).constant('ApiEndpoint', {
+  url: 'http://localhost:8100/api/'
+})
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -25,7 +27,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     })
 
     .state('scheduleSelection', {
-      url: '/scheduleSelection',
+      url: '/scheduleSelection/:category',
       templateUrl: 'templates/schedule-selection.html',
       controller: 'ScheduleSelection'
     });

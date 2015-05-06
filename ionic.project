@@ -1,4 +1,17 @@
 {
   "name": "Schedule-Ionic",
-  "app_id": ""
+  "app_id": "",
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://lukkari.dc.turkuamk.fi/api"
+    }
+  ],
+  "browsers": [
+    {
+      "platform": "android",
+      "browser": "crosswalk",
+      "version": "12.41.296.5"
+    }
+  ]
 }
