@@ -16,8 +16,18 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   $stateProvider
     .state('main', {
       url: '/main',
-      abstract: true,
       templateUrl: 'templates/main.html'
+    })
+
+    .state('scheduleCategories', {
+      url: '/scheduleCategories',
+      templateUrl: 'templates/schedule-categories.html'
+    })
+
+    .state('scheduleSelection', {
+      url: '/scheduleSelection',
+      templateUrl: 'templates/schedule-selection.html',
+      controller: 'ScheduleSelection'
     });
 
     $urlRouterProvider.otherwise('/main');

@@ -1,1 +1,4 @@
-angular.module('starter.controllers', []);
+angular.module('starter.controllers', [])
+
+.controller('ScheduleSelection', function($scope, $stateParams) {
+});
