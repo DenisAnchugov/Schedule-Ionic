@@ -1,8 +1,21 @@
-.row{
-  padding:0;
+.item {
+  padding-top: 2px;
+  padding-bottom: 4px;
+  padding-left: 8px;
 }
 
-.item-divider{
-  padding-top: 5px;
+.timeHeader{
+  background-color: #0eba08;
+  color: white;
+}
+
+.subjectTitle{
   padding-bottom: 5px;
+  font-weight: 500;
+}
+
+.subjectInfo{
+  font-weight: lighter;
+  font-size: small;
+  padding-left: 5px;
 }
