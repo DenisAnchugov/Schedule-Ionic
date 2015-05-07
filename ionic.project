@@ -1,10 +1,10 @@
 {
   "name": "Schedule-Ionic",
-  "app_id": "",
+  "app_id": "417e52a3",
   "proxies": [
     {
       "path": "/api",
-      "proxyUrl": "http://lukkari.dc.turkuamk.fi/api"
+      "proxyUrl": "http://lukkari.dc.turkuamk.fi/api/"
     }
   ],
   "browsers": [
