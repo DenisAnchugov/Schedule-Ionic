@@ -1,6 +1,6 @@
 'use strict';
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.services']).constant('ApiEndpoint', {
-  url: 'http://lukkari.dc.turkuamk.fi/api/'
+  url: 'http://localhost:8100/api/'
 })
 
 .run(function($ionicPlatform) {
@@ -9,15 +9,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services']).
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
     }
     if(window.StatusBar) {
-      StatusBar.styleDefault();
+      window.StatusBar.styleDefault();
     }
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+  $ionicConfigProvider.tabs.position('bottom');
   $stateProvider
     .state('main', {
-      url: '/main',
+      url: '/',
       templateUrl: 'templates/main.html'
     })
 
@@ -33,10 +34,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services']).
     })
 
     .state('schedulePresentation', {
-      url: '/schedulePresentation/:requestedSchedule',
+      url: '/schedulePresentation/{requestedSchedule}',
       templateUrl: 'templates/schedule-presentation.html',
       controller: 'SchedulePresentation'
     });
 
-    $urlRouterProvider.otherwise('/main');
+    $urlRouterProvider.otherwise('/');
 });

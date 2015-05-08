@@ -9,14 +9,26 @@ angular.module('starter.controllers', [])
 })
 
 .controller('SchedulePresentation', function($scope, $stateParams, ApiAccess) {
-  ApiAccess.get('schedule/' + $stateParams.requestedSchedule).then(function(weekSchedule){
+  $scope.requestTimetable = function(appendix){
+    ApiAccess.get('schedule/' + $stateParams.requestedSchedule + appendix).then(function(weekSchedule){setTimetable(weekSchedule);});
+  };
+
+  var setTimetable = function(weekSchedule){
+    $scope.weekNumber = parseInt(weekSchedule.data.week);
     $scope.weekSchedule = weekSchedule.data;
-    $scope.commas = function commas(items) {
-      var formattedRoomsString = [];
-      angular.forEach(items, function(value, key){
-      formattedRoomsString.push(value.name);
-      });
-      return formattedRoomsString.join(', ');
-    };
-  });
+  };
+
+  $scope.getTimetableByWeekNumber = function(weekNumber){
+    $scope.requestTimetable('?w=' + weekNumber);
+  };
+
+  $scope.requestTimetable('');
+
+  $scope.toCommaSeparatedString = function(items) {
+    var formattedRoomsString = [];
+    angular.forEach(items, function(value, key){
+    formattedRoomsString.push(value.name);
+    });
+    return formattedRoomsString.join(', ');
+  };
 });
