@@ -1,12 +1,11 @@
 <ion-view view-title="{{categoryName}}">
   <ion-nav-bar class="bar-energized">
-    <ion-nav-back-button>
-    </ion-nav-back-button>
+    <ion-nav-back-button></ion-nav-back-button>
   </ion-nav-bar>
   <ion-content>
     <ion-list>
-      <ion-item class="item-remove-animate" ng-repeat="categorySelection in categoryItems" type="item-text-wrap" href="#/schedulePresentation/{{categorySelection.name}}">
-        <h2>{{categorySelection.name}}</h2>
+      <ion-item collection-repeat="categorySelection in categoryItems" type="item-text-wrap" href="#/schedulePresentation/{{categorySelection.name}}">
+        {{categorySelection.name}}
       </ion-item>
     </ion-list>
   </ion-content>

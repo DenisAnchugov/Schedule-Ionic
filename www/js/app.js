@@ -16,14 +16,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services']).
 
 .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
   $ionicConfigProvider.tabs.position('bottom');
-  $stateProvider
-    .state('main', {
-      url: '/',
-      templateUrl: 'templates/main.html'
-    })
+  $ionicConfigProvider.backButton.text('').previousTitleText(false);
 
+  $stateProvider
     .state('scheduleCategories', {
-      url: '/scheduleCategories',
+      url: '/',
       templateUrl: 'templates/schedule-categories.html'
     })
 
@@ -37,6 +34,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services']).
       url: '/schedulePresentation/{requestedSchedule}',
       templateUrl: 'templates/schedule-presentation.html',
       controller: 'SchedulePresentation'
+    })
+
+    .state('weekSelection', {
+      url: '/weekSelection',
+      templateUrl: 'templates/week-selection.html',
+      controller: 'WeekSelection'
     });
 
     $urlRouterProvider.otherwise('/');

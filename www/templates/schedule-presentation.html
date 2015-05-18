@@ -1,8 +1,10 @@
 <ion-view view-title="{{weekSchedule.title}}">
   <ion-nav-bar class="bar-positive">
-    <ion-nav-back-button></ion-nav-back-button>
     <ion-nav-buttons side='secondary'>
-      <button class="button button-assertive">{{weekNumber}}</button>
+      <a href="#/weekSelection" class="button button-assertive">{{weekNumber}}</a>
+    </ion-nav-buttons>
+    <ion-nav-buttons side='primary'>
+      <a href="#/" class="button button-icon icon ion-navicon"></a>
     </ion-nav-buttons>
   </ion-nav-bar>
 
